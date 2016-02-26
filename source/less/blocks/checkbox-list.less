@@ -1,0 +1,143 @@
+.checkbox-list {
+
+  &__wrap {
+    margin-bottom: 55px;
+  }
+
+  &__col {
+
+    &:last-child {
+      .checkbox-list__wrap:last-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 79px;
+    font-size: @font-size-base+4;
+    line-height: 26px;
+    color: #000;
+    text-transform: none;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+
+      &::before {
+        background-color: @gray-form-border;
+      }
+    }
+
+    &:active {
+
+      &::before {
+        background-color: @gray-btn-active;
+      }
+
+      &::after {
+        opacity: 0.2;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: -80px;
+      width: 56px;
+      height: 56px;
+      border-radius: 3px;
+      background-color: @gray-form;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 4px;
+      left: -62.5px;
+      width: 25px;
+      height: 19px;
+      background: url("../img/spritesheet.png") no-repeat -105px -3px;
+    }
+  }
+
+  &__item:checked+label::after {
+    display: block;
+  }
+}
+
+/* tablet-layout */
+
+@media(min-width: @screen_md) {
+  .checkbox-list {
+    display: flex;
+    padding-left: 97px;
+    padding-right: 97px;
+
+    &__col {
+      box-sizing: border-box;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      &:first-child {
+        margin-right: 55px;
+      }
+    }
+
+    &__wrap {
+      margin-bottom: 65px;
+
+      &:last-child {
+        margin-bottom: 55px;
+      }
+    }
+  }
+}
+
+/*desktop-layout */
+
+ @media(min-width: @screen_lg) {
+  .checkbox-list {
+    padding: 0;
+
+    &__col {
+      display: block;
+      width: auto;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+
+    &__wrap {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 65px;
+    }
+
+    &__col:last-child {
+
+      .checkbox-list__wrap {
+        margin-right: 45px;
+      }
+
+      .checkbox-list__wrap:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+
