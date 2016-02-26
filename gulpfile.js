@@ -75,7 +75,3 @@ gulp.task("script", function() {
 });
 
 gulp.task("build", ["compile", "copy", "compress", "script"]);
-
-
-// Оставьте эту строку в самом конце файла
-require("./.gosha");
