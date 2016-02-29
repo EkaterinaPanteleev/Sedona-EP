@@ -1,0 +1,49 @@
+.post-info {
+  padding-left: 4px;
+  font-size: 0;
+  color: @gray-light;
+  font-style: italic;
+  text-align: left;
+
+  &__date {
+    display: inline-block;
+    vertical-align: top;
+    font-size: @font-size-base;;
+    margin-right: 30px;
+  }
+
+  &__date-ico {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+
+    svg {
+      fill: @blue;
+    }
+  }
+
+  &__category {
+    display: inline-block;
+    vertical-align: top;
+    font-size: @font-size-base;
+  }
+
+  &__category-ico {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+
+    svg {
+      fill: @blue;
+    }
+  }
+}
+
+
+/* table-layout */
+
+@media(min-width: @screen_md) {
+  .post-info {
+    padding-left: 12px;
+  }
+}
