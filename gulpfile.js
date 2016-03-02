@@ -52,7 +52,9 @@ gulp.task("compile", function() {
 gulp.task("copy", function() {
   return gulp.src([
                     "source/index.html",
-                    "source/form.html"], {
+                    "source/form.html",
+                    "source/blog.html",
+                    "source/post.html"], {
     base: "source"
   })
   .pipe(gulp.dest("build"));
