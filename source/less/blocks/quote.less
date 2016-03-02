@@ -1,0 +1,27 @@
+.quote {
+  margin: 0;
+  margin-top: 25px;
+  border-left: 2px solid @blue;
+  padding-left: 16px;
+  padding-right: 13px;
+
+  &__text {
+    line-height: 24px;
+  }
+
+  &__author {
+    font-style: italic;
+    line-height: 24px;
+    text-transform: none;
+    color: @brown;
+  }
+}
+
+/* tablet-layout */
+
+@media(min-width: @screen_md) {
+  .quote {
+    padding-left: 34px;
+    padding-right: 180px;
+  }
+}

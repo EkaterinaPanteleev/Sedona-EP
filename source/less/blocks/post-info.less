@@ -5,6 +5,11 @@
   font-style: italic;
   text-align: left;
 
+  &__wrap {
+    margin-top: 18px;
+    padding-left: 5px;
+  }
+
   &__date {
     display: inline-block;
     vertical-align: top;
@@ -45,5 +50,65 @@
 @media(min-width: @screen_md) {
   .post-info {
     padding-left: 12px;
+
+    &--post {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #fff;
+      position: relative;
+      padding-left: 40px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 190px;
+        height: 2px;
+        background-color: @gray-form-hr;
+        left: -170px;
+        top: 10px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 194px;
+        height: 2px;
+        background-color: @gray-form-hr;
+        left: 320px;
+        top: 10px;
+      }
+
+      .post-info__date {
+        margin-right: 40px;
+      }
+    }
+
+    &__wrap {
+      margin-top: 40px;
+    }
+  }
+}
+
+
+/* desktop-layout */
+
+@media(min-width: @screen_lg) {
+  .post-info {
+
+    &--post {
+
+      &:before {
+        width: 250px;
+        left: -230px;
+      }
+
+      &:after {
+        width: 250px;
+      }
+    }
+
+    &__wrap {
+      margin-top: 50px;
+    }
   }
 }
